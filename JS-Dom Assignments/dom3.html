@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <!-- <table border="2">--(1)
+        <tr>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>city</th>
+            <th>salary</th>
+        </tr>
+        <tbody id="d1">  </tbody>
+    </table>  -->
+
+      <!-- <h2>Male People</h2>--(2) -->
+    <!-- <table border="2">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody id="a1">
+             //Male people will be inserted here 
+        </tbody>
+    </table> -->
+
+    <!-- <h2>Female People</h2> -->
+    <!-- <table border="2">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody id="a2">
+           // Female people will be inserted here 
+        </tbody>
+    </table>  -->
+
+    <!-- <table border="2">--(3)
+        <tr>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>city</th>
+            <th>salary</th>
+        </tr>
+        <tbody id="d1">  </tbody>
+    </table> -->
+
+    <!-- <table border="2">---(4)
+        <tr>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>city</th>
+            <th>salary</th>
+        </tr>
+        <tbody id="d1">  </tbody>
+    </table>  -->
+
+      
+
+    <script>
+//  8.Generate UI using document object for the given Array of Objects
+        var people = [
+            {
+                "firstname": "praveen",
+                "lastname": "gubbala",
+                "age": 36,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 10000
+            },
+            {
+                "firstname": "srikanth",
+                "lastname": "gubbala",
+                "age": 32,
+                "gender": "male",
+                "city": "bengaluru",
+                "salary": 20000
+            },
+            {
+                "firstname": "pradeep",
+                "lastname": "reddy",
+                "age": 21,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 25000
+            },
+            {
+                "firstname": "mounika",
+                "lastname": "mudiraj",
+                "age": 20,
+                "gender": "female",
+                "city": "nalgonda",
+                "salary": 30000
+            },
+            {
+                "firstname": "nikhil",
+                "lastname": "m",
+                "age": 22,
+                "gender": "male",
+                "city": "guntur",
+                "salary": 2000
+            },
+            {
+                "firstname": "riya",
+                "lastname": "bhadouria",
+                "age": 14,
+                "gender": "female",
+                "city": "indore",
+                "salary": 40000
+            }
+        ];
+ //1. Display all the people's data in a table.
+    //     var x = document.getElementById("d1")
+    //     for (var i = 0; i <= people.length-1; i++) {
+    //         var tr = document.createElement("tr")
+    //     var firstnametd=document.createElement("td")
+    //     firstnametd.innerHTML=people[i].firstname;
+    //     tr.appendChild(firstnametd)
+
+    //     var  lastnametd=document.createElement("td")
+    //    lastnametd.innerHTML=people[i].lastname;
+    //     tr.appendChild(lastnametd)
+
+    //     var agetd=document.createElement("td")
+    //     agetd.innerHTML=people[i].age;
+    //     tr.appendChild(agetd)
+
+    //     var gendertd=document.createElement("td")
+    //     gendertd.innerHTML=people[i].gender;
+    //     tr.appendChild(gendertd)
+
+    //     var citytd=document.createElement("td")
+    //     citytd.innerHTML=people[i].city;
+    //     tr.appendChild(citytd)
+
+    //     var salarytd=document.createElement("td")
+    //     salarytd.innerHTML=people[i].salary;
+    //     tr.appendChild(salarytd)
+
+    //     x.appendChild(tr)
+
+    //      }
+
+// 2.Display all male and female people in two separate tables.
+        // var m = document.getElementById('a1')
+        // var f = document.getElementById('a2')
+
+        // people.forEach(function (person) {
+        // var tr = document.createElement("tr")
+
+        // var td1=document.createElement("td")
+        //     td1.innerHTML =person.firstname
+        //     tr.appendChild(td1)
+            
+        //     var td1=document.createElement("td")
+        //     td1.innerHTML =person.lastname
+        //     tr.appendChild(td1)
+
+        //     var td1=document.createElement("td")
+        //     td1.innerHTML =person.age
+        //     tr.appendChild(td1)
+
+        //     var td1=document.createElement("td")
+        //     td1.innerHTML=person.gender;
+        //     tr.appendChild(td1)
+
+        //     var td1=document.createElement("td")
+        //     td1.innerHTML =person.city
+        //     tr.appendChild(td1)
+
+        //     var td1=document.createElement("td")
+        //     td1.innerHTML =person.salary
+        //     tr.appendChild(td1)
+
+        //     if (person.gender === 'male') {
+        //         m.appendChild(tr);
+        //     } else if (person.gender === 'female') {
+        //         f.appendChild(tr);
+        //     }
+        // });
+   
+//3.Display only those people in a table who are having salaries more than 20000.
+// var x = document.getElementById("d1")
+
+// people.forEach(function(person){
+// var tr = document.createElement("tr")
+
+// var td1=document.createElement("td")
+// td1.innerHTML=person.firstname;
+// tr.appendChild(td1)
+
+// var td2=document.createElement("td")
+// td2.innerHTML=person.lastname;
+// tr.appendChild(td2)
+
+// var td3=document.createElement("td")
+// td3.innerHTML=person.age;
+// tr.appendChild(td3)
+
+// var td4=document.createElement("td")
+// td4.innerHTML=person.gender;
+// tr.appendChild(td4)
+
+// var td5=document.createElement("td")
+// td5.innerHTML=person.city;
+// tr.appendChild(td5)
+
+// var td6=document.createElement("td")
+// td6.innerHTML=person.salary;
+// tr.appendChild(td6)
+
+// if(person.salary>20000){
+//    x.appendChild(tr)
+// }
+//  })
+
+
+//4.Display only the male people who are above the age of 25.
+// var x = document.getElementById("d1")
+
+// people.forEach(function(person){
+// var tr = document.createElement("tr")
+
+// var td1=document.createElement("td")
+// td1.innerHTML=person.firstname;
+// tr.appendChild(td1)
+
+// var td2=document.createElement("td")
+// td2.innerHTML=person.lastname;
+// tr.appendChild(td2)
+
+// var td3=document.createElement("td")
+// td3.innerHTML=person.age;
+// tr.appendChild(td3)
+
+// var td4=document.createElement("td")
+// td4.innerHTML=person.gender;
+// tr.appendChild(td4)
+
+// var td5=document.createElement("td")
+// td5.innerHTML=person.city;
+// tr.appendChild(td5)
+
+// var td6=document.createElement("td")
+// td6.innerHTML=person.salary;
+// tr.appendChild(td6)
+
+// if(person.gender==="male" && person.age>25){
+//    x.appendChild(tr)
+// }
+//  }) 
+                
+    </script>
+</body>
+
+</html>

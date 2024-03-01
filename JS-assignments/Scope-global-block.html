@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <div id="d1">
+
+    </div>
+   <script>
+    //FORLOOP
+//click on name button shows  alert box "hi"   
+    // var array=["tanu","sravani","maha","bindu","hena"]
+    // for(var i=0;i<=array.length-1;i++){
+    //     var btn=document.createElement("button")
+    //     btn.onclick=function(){alert("hi")}
+    //     btn.innerHTML=array[i]
+    //     var a=document.getElementById('d1')
+    //     a.appendChild(btn)
+
+    // }
+//in var condition it only takes varable not initialization so it gives "undefined"
+    // var array=["tanu","sravani","maha","bindu","hena"]
+    // for(var i=0;i<=array.length-1;i++){
+    //     var btn=document.createElement("button")
+    //     btn.onclick=function(){alert(array[i])}
+    //     btn.innerHTML=array[i]
+    //     var a=document.getElementById('d1')
+    //     a.appendChild(btn)
+
+    // }
+//in var condition when we give index it literate and gives final index value ex"5" 
+    // var array=["tanu","sravani","maha","bindu","hena"]
+    // for(var i=0;i<=array.length-1;i++){
+    //     var btn=document.createElement("button")
+    //     btn.onclick=function(){alert([i])}
+    //     btn.innerHTML=array[i]
+    //     var a=document.getElementById('d1')
+    //     a.appendChild(btn)
+
+    // }
+
+ //in let condition, it takes both variable name and initialization.it shows index values on each name ex'0','1','2','3','4'
+    //    var array=["tanu","sravani","maha","bindu","hena"]
+    //           for(let i=0;i<=array.length-1;i++){
+    //             var btn=document.createElement("button")
+    //             btn.onclick=function(){alert([i])}
+    //              btn.innerHTML=array[i]
+    //              var a=document.getElementById('d1')
+    //               a.appendChild(btn)
+
+    // } 
+// in let condition it shows individual name on every click
+    // var array=["tanu","sravani","maha","bindu","hena"]
+    //           for(let i=0;i<=array.length-1;i++){
+    //             var btn=document.createElement("button")
+    //             btn.onclick=function(){alert(array[i])}
+    //              btn.innerHTML=array[i]
+    //              var a=document.getElementById('d1')
+    //               a.appendChild(btn)
+
+    // }
+
+    //FOREACH
+ //click on name button shows  alert box "hi"   
+    // var array=["tanu","sravani","maha","bindu","hena"]
+    // array.forEach (function(x){
+    //     var btn=document.createElement("button")
+    //     btn.onclick=function(){alert("hi")}
+    //     btn.innerHTML=x;
+    //     var a=document.getElementById('d1')
+    //     a.appendChild(btn)
+    // })
+
+    var array=["tanu","sravani","maha","bindu","hena"]
+    array.forEach (function(x){
+        var btn=document.createElement("button")
+        btn.onclick=function(){alert(array[i])}
+        btn.innerHTML=x;
+        var a=document.getElementById('d1')
+        a.appendChild(btn)
+    })
+
+    var array=["tanu","sravani","maha","bindu","hena"]
+    array.forEach (function(x,i){
+        var btn=document.createElement("button")
+        btn.onclick=function(){alert[i]}
+        btn.innerHTML=x;
+        var a=document.getElementById('d1')
+        a.appendChild(btn)
+    })
+
+    
+
+   </script> 
+</body>
+</html>

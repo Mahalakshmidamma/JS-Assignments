@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>counter:<span id="mm"></span></h1>
+    <button onclick="inc()">increment</button>
+    <button onclick="dec()">decrement</button>
+    <button onclick="res()">Reset</button>
+    <script>
+       var a=0;
+       document.getElementById("mm").innerHTML=a
+       function inc(){
+        a++
+        document.getElementById("mm").innerHTML=a
+       }
+       function dec(){
+        a--
+        document.getElementById("mm").innerHTML=a
+       }
+       function res(){
+        a = 0
+        document.getElementById("mm").innerHTML=a
+       }
+     //count increase & increase board  
+
+
+
+    </script>
+    
+</body>
+</html>

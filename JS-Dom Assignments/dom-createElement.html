@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is begininig</h1>
+    <!-- <div id="d1"> </div> -->
+    <ul id="d2">
+
+    </ul>
+    <form onsubmit="event.preventDefault()">//stops form to excute before funcal
+        <input type="text" placeholder="fullname" id="fn"><br/>
+        <input type="text" placeholder="place" id="pl"><br/>
+        <input type="text" placeholder="gender" id="ge"><br/>
+        <button onClick="addemployee()">add employee</button>
+
+    </form>
+    <table border="2">
+        <thead>
+            <th>fullname</th>
+            <th>place</th>
+            <th>gender</th>
+        </thead>
+        <tbody id="dm">
+
+
+        </tbody>
+    </table>
+  <script>
+    //  var newh2=document.createElement("h2")
+    //  console.log(newh2)//BODY:this is beginning //<h2></h2>
+    //  //console.dir(newh2)//h2 OBJECT
+    //  var newh2=document.createElement("h2")
+    //  newh2.innerHTML="this is middle"
+    //  console.log(newh2)//<h2>this is middle</h2>
+    //  document.body.appendChild(newh2)//BODY:this is middle
+//ARRAY--------in list
+    //  var students=["arj","nick",'hey',"prem","srav"]
+    //  for(var i=0;i<=students.length-1;i++){
+    //    var newli=document.createElement("li")
+    //    newli.innerHTML=students[i]
+    //    console.log(newli)//prints all elements like<li>arj</li>
+    //    document.getElementById("d1").appendChild(newli)//BODY:printa as list with dot
+    //  }
+//ARRAY OF OBJECT-------in table
+         var employees=[
+            {
+             fullname:"arjun",
+             place:"vizag",
+             gender:"male"
+            },
+            {
+            fullname:"kathik",
+             place:"hyd",
+             gender:"male"
+            },
+            {
+            fullname:"neelima",
+             place:"ap",
+             gender:"female"
+            }
+         ]//table forms at upper
+         for(var i=0;i<=employees.length-1;i++){
+        //    console.log(employees[i])//3 data
+         var newtr=document.createElement("tr")
+
+         var fullnametd=document.createElement("td")
+         fullnametd.innerHTML=employees[i].fullname
+         newtr.appendChild(fullnametd)
+
+         var placetd=document.createElement("td")
+         placetd.innerHTML=employees[i].place
+         newtr.appendChild(placetd)
+
+         var gendertd=document.createElement("td")
+         gendertd.innerHTML=employees[i].gender
+         newtr.appendChild(gendertd)
+
+         document.getElementById("dm").appendChild(newtr)
+         console.log(newtr)//prints full names incase of 1 &print all data by 3
+         }//addition of employees at upper as form tag
+         function employees(){
+            var newemp={
+                fullname:document.getElementById("fn").value,
+                place:document.getElementById("pl").value,
+                gender:document.getElementById("ge").value
+            }
+            console.log(newemp)//obj prints
+            employees.push(newemp)
+            console.log(employees)
+         }
+
+     
+  </script>  
+</body>
+</html>

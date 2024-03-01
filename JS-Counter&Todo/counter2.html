@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body>
+    <h1>india :<span id="a"></span><span id="a1"></span></h1>
+    <button onclick="aus()">score</button>
+
+    <h1>pakisthan :<span id="b"></span><span id="b1"></span></h2>
+        <button onclick="pak()">score</button>
+
+        <button onclick="win()">Win Batch</button>
+        <h1 id="result"></h1>
+
+
+        <script>
+            var a = 0;
+            var b = 0;
+            document.getElementById("a").innerHTML = (a)
+            document.getElementById("b").innerHTML = (b)
+            function aus() {
+                a++
+                document.getElementById("a").innerHTML = (a)
+                document.getElementById("a1").innerHTML = "*"
+                document.getElementById("b1").innerHTML = ""
+
+            }
+            function pak() {
+                b++
+                document.getElementById("b").innerHTML = (b)
+                document.getElementById("b1").innerHTML = ("*")
+                document.getElementById("a1").innerHTML = ""
+            }
+            function win() {
+                var x = document.getElementById('a').innerHTML = a
+                var x = document.getElementById('b').innerHTML = b
+
+                if (a > b) {
+                    var result = document.getElementById('result').textContent = "INDIA WINNER"
+
+
+                }
+                else if (a < b) {
+                    var result = document.getElementById('result').textContent = "PAK WINNER"
+
+                }
+                else {
+                    var result = document.getElementById('result').textContent = "MATCH DRAW"
+
+                }
+
+            }
+
+        </script>
+</body>
+
+</html>

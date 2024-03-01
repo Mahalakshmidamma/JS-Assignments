@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+    #d1{
+        color:green;
+    }
+   </style>
+</head>
+<body>
+    <h1 id="d1">hello maha</h1>
+    <button onclick="abc()">change color of maha</button>
+    <button onclick="xyz()">change the background-color of paragraps</button>
+    <p>
+     Story of Seasons, known in Japan as Bokujō Monogatari[a] and formerly known
+     as Harvest Moon, is an agricultural simulation role-playing video game 
+    series created by Yasuhiro Wada and developed by Victor Interactive Software
+    (acquired by Marvelous Entertainment in 2003, now Marvelous Inc.). 
+     Story of Seasons was the first game to be released under the new 
+     international series title of the same name.
+    </p>
+    <p>
+    The main objective of the series is to rebuild a dilapidated old farm 
+    and turn it into a successful one. Over a period of time, the player tends 
+    to crops and livestock, befriends nearby townsfolk, and eventually marries
+    and starts a family. The first game in the series, Harvest Moon, was 
+    released for the Super NES in 1996.
+    </p>
+   <script>
+    function abc(){
+        var x=document.getElementById("d1")
+        console.dir(x)
+        x.style.color="red"//h1 color changes 
+    }
+    function xyz(){
+        var y=document.getElementsByTagName("p")
+        console.dir(y)//html collection
+        for(var i=0;i<=y.length-1;i++){
+            y[i].style.backgroundColor="blue"//paragraph color changes
+        }
+    }
+
+    
+   </script> 
+</body>
+</html>

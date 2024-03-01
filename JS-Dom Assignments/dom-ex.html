@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nice</title>
+</head>
+
+<body>
+  <table border="2">
+    <thead>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Manufacturer</th>
+    </thead>
+    <tbody id="a">
+
+    </tbody>
+  </table>
+
+  <table border="2">
+    <thead>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Manufacturer</th>
+    </thead>
+    <tbody id="b">
+
+    </tbody>
+  </table>
+
+  <script>
+    var products = [
+      {
+        "firstname": "praveen",
+        "lastname": "gubbala",
+        "age": 36,
+        "gender": "male",
+        "city": "hyd",
+        "salary": 10000
+      },
+      {
+        "firstname": "srikanth",
+        "lastname": "gubbala",
+        "age": 32,
+        "gender": "male",
+        "city": "bengaluru",
+        "salary": 20000
+      },
+      {
+        "firstname": "pradeep",
+        "lastname": "reddy",
+        "age": 21,
+        "gender": "male",
+        "city": "hyd",
+        "salary": 25000
+      },
+      {
+        "firstname": "mounika",
+        "lastname": "mudiraj",
+        "age": 20,
+        "gender": "female",
+        "city": "nalgonda",
+        "salary": 30000
+      },
+      {
+        "firstname": "nikhil",
+        "lastname": "m",
+        "age": 22,
+        "gender": "male",
+        "city": "guntur",
+        "salary": 2000
+      },
+      {
+        "firstname": "riya",
+        "lastname": "bhadouria",
+        "age": 14,
+        "gender": "female",
+        "city": "indore",
+        "salary": 40000
+      }
+    ];
+
+    var x = document.getElementById('a');
+    var y = document.getElementById('b');
+
+    for (var i = 0; i < products.length; i++) {
+      var product = products[i];
+      var newtr = document.createElement('tr');
+      for (var key in product) {
+        var td = document.createElement('td');
+        var a = document.createTextNode(product[key])
+        td.appendChild(a);
+        newtr.appendChild(td);
+      }
+
+      if (product.age > 25) {
+        x.appendChild(newtr);
+      } else if (product.age < 25) {
+        y.appendChild(newtr);
+      }
+    }
+  </script>
+</body>
+
+</html>

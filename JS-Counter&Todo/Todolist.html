@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #d1{
+           background-color:pink;
+           height: 40px;
+           font-size:25px;
+           padding:20px;
+        }
+        #i1{
+            height:30px;
+            width:800px
+        }
+        #i2{
+            height:30px;
+            width:800px
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="d1">Edupoly Todolist
+    </div><br>
+        <input type="text" placeholder="Enter Title" id="i1">
+        <br><br>
+        <input type="text" placeholder="Enter Description" id="i2"><br><br>
+        <div id="addBtn">
+            <h1 onclick="addTodo()">+</h1>
+        </div>
+
+
+
+     <input type="text" id="a1">
+    <button onclick="addtask()">Add Here</button>
+    <ul id="list">
+
+    </ul>
+  <script>
+      var a=document.getElementById("a1")
+     var t1=document.getElementById("list")
+
+     var tasks=[];
+     function addtask(){
+        t1.innerHTML="" 
+        tasks.push(a.value)
+        // console.log('total arr',tasks) 
+        add(tasks)
+    }
+
+
+    function add(arr){
+        t1.innerHTML="" 
+        arr.forEach(function(each,ind){
+            var li=document.createElement("li")
+            li.innerHTML=each
+            t1.appendChild(li)
+
+            var del=document.createElement("button")
+            del.innerHTML="delete"
+            t1.appendChild(del)
+            del.onclick=function(){
+              arr.splice(ind,1) ;
+            // arr.splice(ind,1)
+            //   console.log('deleted)
+              add(arr) 
+            }
+
+            // li.innerHTML=each
+            
+
+           
+               })
+            console.log(arr)
+            }
+    
+
+       
+  </script>  
+</body>
+</html>

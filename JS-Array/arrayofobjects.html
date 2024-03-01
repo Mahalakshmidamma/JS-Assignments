@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+<head></head>
+<body>
+    <script>
+        var students= [
+     {
+        fullname:'karim',
+        age:23,
+        place:'Ap',
+        gender:'male',
+        paid:25000
+     },
+      {
+        fullname:'sravan',
+        age:13,
+        place:'telangana',
+        gender:'male',
+        paid:10000
+      },
+      {
+        fullname:'nani',
+        age:21,
+        place:'Ap',
+        gender:'male',
+        paid:20000
+      },
+      {
+        fullname:'kiran',
+        age:40,
+        place:'telangana',
+        gender:'male',
+        paid:32000
+      },
+     {
+        fullname:'manasa',
+        age:15,
+        place:'gujarat',
+        gender:'female',
+        paid:38000
+     },
+    ]
+    // NAMES
+  //   students.sort(function(a,b){
+  //     if(a.fullname>b.fullname){
+  //     return 1
+  //   }
+  //   else{
+  //     return-1
+  //   }
+  // })
+  //   console.log(students)
+// AGE
+    // students.sort(function(a,b){
+    //   if(a.age>b.age){
+    //     return 1
+    //   }
+    //   else{
+    //     return -1
+    //   }
+    // })
+    // console.log(students)
+    // GENDER
+   res= students.sort(function(a,b){
+       return a['gender']=='female'}) 
+    console.log(res)
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
